@@ -2,8 +2,8 @@
 <h1> Create Post </h1>
 <%= bootstrap_form_for(@post) do |f| %>
   <%= f.select(:category_id) do %>
-    <% [['Category 1', 1], ['Category 2', 2], ['Category 3', 3], ['Category 4', 4], ['Category 5', 5]].each do |c| -%>
-      <%= content_tag(:option, c.first, value: c.last) %>
+    <% @categories.each do |c| -%>
+      <%= content_tag(:option, c.name, value: c.id) %>
     <% end %>
   <% end %>
   <%= f.text_field :title %>
