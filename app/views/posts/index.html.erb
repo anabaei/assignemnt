@@ -1,1 +1,99 @@
-<h1> ds </h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+ /*.more {
+   display: none;
+ }
+ .show {
+   display: block;
+ }*/
+ .row.equal {
+     display: flex;
+     flex-wrap: wrap;
+   }
+
+   #cell {
+
+       height: 150px;
+       border: 1px solid white;
+       display: -webkit-flex; /* Safari */
+       display: flex;
+   }
+/*.bud {
+     display:none;
+ }*/
+   .bud:nth-of-type(7) ~ .bud {
+     /*display:none;*/
+     display: none;
+ }
+
+ .showall{
+   display: block;
+ }
+ .hide{
+   display: none;
+ }
+  .fa-heart {
+    color: pink;
+  }
+
+</style>
+
+<script>
+
+
+// differenct between var i of array and var i in array 😘
+// flux keep height of box fixed 😗
+//  .bud:nth-of-type(7) ~ .bud { keep first 8 elements show 😚
+
+function my(){
+ a =  document.getElementsByClassName("bud")
+ for (var i of a) {
+
+   i.className += 'showall';
+}
+ document.getElementById("showmore").className += 'hide';
+
+}
+
+</script>
+<body class="containre">
+
+  <div class="row">
+     <div class="col-md-8">
+         <%= image_tag("https://www.axure.com/c/attachments/forum/7-0-general-discussion/3919d1401387174-turn-placeholder-widget-into-image-maintain-interactions-screen-shot-2014-05-29-10.46.57-am.png", size: "400x20" , class: "img-responsive") %>
+
+       <%= fa_icon "heart", class: "fa-3x" %>
+        433 <%= %>
+       <h3>
+
+       </h3>
+       <p>
+
+       </p>
+     </div>
+     <div class="col-md-4 ">
+      <h3> Most Like </h3>
+      <p> Infrastructure-wise everything was there: there was a mailing list,
+there was a website, there was source code control (CVS). But there
+was no actual code for people to work on. The only things I had
+were some ideas of what I wanted to do, an itch to scratch and the
+right buzzwords. I actually wanted people to join in creating this
+program and make it a truly collaborative project.</p>
+     </div>
+   </div>
+
+
+  <div class="col-md-12"><br></div>
+
+
+
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <button id="showmore" onclick="my()">Show more</button>
+
+    </div>
+    <div class="col-md-4"></div>
+</body>
+</html>
