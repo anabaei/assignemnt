@@ -6,7 +6,7 @@ give it a simple and it's name will used as if it were the name of a model.
 You will need provide a url argument, because without a model instance simple
 will not be able to dertermine the correct url to post.
 %>
-<%= simple_form_for :session, as: :new_session, url: sessions_path do |f| %>
+<%= simple_form_for :session, as: :new_session, url: session_path do |f| %>
   <%= f.input :email %>
   <%= f.input :password %>
   <%= f.button :submit, 'Sign In' %>
