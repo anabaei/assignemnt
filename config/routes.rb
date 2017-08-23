@@ -5,7 +5,7 @@ Rails.application.routes.draw do
    get('/', { to: 'posts#index', as: :home })
 
   #  resources :sessions, only: [:new, :create]
-  #  resources :users, only: [:new, :show, :create]
+     resources :users, only: [:new, :show, :create]
     resources :posts , only: [:index, :new, :show ,:create]
   #   do   resources :comments, only: [:index, :new, :create]
   #  end
