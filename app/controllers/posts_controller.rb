@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+before_action :authenticate_user!, only: [:create]
   def index
    @posts = Post.order("created_at desc")
    @mostlike = Post.last
