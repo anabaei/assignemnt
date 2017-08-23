@@ -48,9 +48,6 @@
                <li><%= link_to 'Login', new_session_path %></li>
                <% end %>
 
-
-
-
              </ul>
            </div>
          </div>
@@ -60,8 +57,8 @@
    <!--  -->
 
     <div> <%= flash[:notice] %></div>
-     <% elsif flash[:alert] %> <div><%= flash[:alert] %></div>
-   <% end %>
+    <div> <%= flash[:alert] %> <div>
+
   <body>
     <%= user_signed_in? %>
     <%= yield %>
