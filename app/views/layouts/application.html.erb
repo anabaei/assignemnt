@@ -42,6 +42,8 @@
 
                 <% if user_signed_in? %>
                <li><%= link_to 'Sign Out', session_path, method: :delete %></li>
+
+               <li><%= link_to 'Create Post', new_post_path %></li>
                <% else %>
                 <li><%= link_to 'Sign Up',  new_user_path %></li>
 
