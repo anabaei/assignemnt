@@ -4,9 +4,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    byebug
     user = User.find_by(email: params[:session][:email])
-
      if user #&.authenticate(params[:session][:password])
        session[:user_id] = user.id
        redirect_to home_path, notice: 'Thank you for signing in! ❤️'
@@ -18,5 +16,5 @@ class SessionsController < ApplicationController
 
   def destroy
   end
-  
+
 end
