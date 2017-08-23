@@ -67,7 +67,7 @@ function my(){
        <%= fa_icon "heart", class: "fa-3x" %>
         433 <%= %>
        <h3>
-       <%= link_to @mostlike.title, post_path(@mostlike) %>
+
        </h3>
        <p>
 
@@ -83,7 +83,24 @@ right buzzwords. I actually wanted people to join in creating this
 program and make it a truly collaborative project.</p>
      </div>
    </div>
+   
+   <% cnt = 0 %>
+     <% @posts.each { |f|  %>
+    <div class="bud">
+      <div class="col-md-4 col-xs-12">
 
+        <%= image_tag("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU2HkgGsdwaUOVECPqgTjrQxIafigiPHEz5yeoGLapWVPhzsxGZw" , size: "350x100" , class: "img-responsive") %>
+
+        <%= fa_icon "heart", class: "fa-3x" %>
+          433 <%= %>
+        <h4>
+        <%= link_to f.title, post_path(f) %>
+        </h4>
+        <p id="cell"> <%= f.body %> </p>
+      </div>
+    </div>
+  <!--  -->
+    <%  } %>
 
   <div class="col-md-12"><br></div>
 
