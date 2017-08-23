@@ -12,8 +12,9 @@ class UsersController < ApplicationController
       redirect_to home_path, notice: 'Thank you for signing up!'
     else
       redirect_to  new_user_path, notice: 'Something wrong try again'
+    end
   end
-
+  
   def show
   end
 end
